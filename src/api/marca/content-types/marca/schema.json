@@ -1,0 +1,31 @@
+{
+  "kind": "collectionType",
+  "collectionName": "marcas",
+  "info": {
+    "singularName": "marca",
+    "pluralName": "marcas",
+    "displayName": "Marca",
+    "description": ""
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "marc_nombre": {
+      "type": "string"
+    },
+    "marc_estado": {
+      "type": "boolean"
+    },
+    "marc_descripcion": {
+      "type": "richtext"
+    },
+    "productos": {
+      "type": "relation",
+      "relation": "oneToMany",
+      "target": "api::producto.producto",
+      "mappedBy": "marca"
+    }
+  }
+}

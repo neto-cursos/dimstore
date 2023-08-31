@@ -1,0 +1,31 @@
+{
+  "kind": "collectionType",
+  "collectionName": "categorias",
+  "info": {
+    "singularName": "categoria",
+    "pluralName": "categorias",
+    "displayName": "Categorias",
+    "description": ""
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "cate_nombre": {
+      "type": "string"
+    },
+    "cate_estado": {
+      "type": "boolean"
+    },
+    "cate_descripcion": {
+      "type": "richtext"
+    },
+    "subcategoria": {
+      "type": "relation",
+      "relation": "oneToOne",
+      "target": "api::subcategoria.subcategoria",
+      "mappedBy": "categoria"
+    }
+  }
+}

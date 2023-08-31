@@ -1,0 +1,27 @@
+{
+  "kind": "collectionType",
+  "collectionName": "ventas",
+  "info": {
+    "singularName": "venta",
+    "pluralName": "ventas",
+    "displayName": "Venta"
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "vent_nrodocumento": {
+      "type": "string"
+    },
+    "vent_cotostotal": {
+      "type": "float"
+    },
+    "vent_cantidadtotal": {
+      "type": "float"
+    },
+    "vent_estado": {
+      "type": "boolean"
+    }
+  }
+}

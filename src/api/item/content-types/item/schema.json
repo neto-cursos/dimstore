@@ -1,0 +1,27 @@
+{
+  "kind": "collectionType",
+  "collectionName": "items",
+  "info": {
+    "singularName": "item",
+    "pluralName": "items",
+    "displayName": "Item"
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "item_sku": {
+      "type": "string"
+    },
+    "item_estado": {
+      "type": "boolean"
+    },
+    "tienda": {
+      "type": "relation",
+      "relation": "oneToOne",
+      "target": "api::tienda.tienda",
+      "inversedBy": "item"
+    }
+  }
+}

@@ -1,0 +1,28 @@
+{
+  "kind": "collectionType",
+  "collectionName": "fabricantes",
+  "info": {
+    "singularName": "fabricante",
+    "pluralName": "fabricantes",
+    "displayName": "Fabricantes",
+    "description": ""
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "fabr_nombre": {
+      "type": "string"
+    },
+    "fabr_direccion": {
+      "type": "text"
+    },
+    "fabr_estado": {
+      "type": "boolean"
+    },
+    "fabr_descripcion": {
+      "type": "richtext"
+    }
+  }
+}

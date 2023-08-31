@@ -1,0 +1,66 @@
+{
+  "kind": "collectionType",
+  "collectionName": "productos",
+  "info": {
+    "singularName": "producto",
+    "pluralName": "productos",
+    "displayName": "Productos",
+    "description": ""
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "prod_nombre": {
+      "type": "string"
+    },
+    "prod_modelo": {
+      "type": "string"
+    },
+    "prod_ancho": {
+      "type": "float"
+    },
+    "prod_alto": {
+      "type": "float"
+    },
+    "prod_profundidad": {
+      "type": "float"
+    },
+    "prod_estado": {
+      "type": "boolean"
+    },
+    "prod_descripcion": {
+      "type": "richtext"
+    },
+    "prod_imagen": {
+      "type": "media",
+      "multiple": true,
+      "required": false,
+      "allowedTypes": [
+        "images",
+        "files",
+        "videos",
+        "audios"
+      ]
+    },
+    "marca": {
+      "type": "relation",
+      "relation": "manyToOne",
+      "target": "api::marca.marca",
+      "inversedBy": "productos"
+    },
+    "prod_cantidad": {
+      "type": "decimal"
+    },
+    "prod_preciomayor": {
+      "type": "float"
+    },
+    "prod_preciomenor": {
+      "type": "float"
+    },
+    "prod_descuentos": {
+      "type": "float"
+    }
+  }
+}
