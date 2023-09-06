@@ -26,6 +26,16 @@
       "relation": "oneToMany",
       "target": "api::producto.producto",
       "mappedBy": "marca"
+    },
+    "marc_imagen": {
+      "allowedTypes": [
+        "images",
+        "files",
+        "videos",
+        "audios"
+      ],
+      "type": "media",
+      "multiple": false
     }
   }
 }

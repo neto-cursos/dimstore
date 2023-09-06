@@ -26,6 +26,12 @@
       "relation": "oneToOne",
       "target": "api::subcategoria.subcategoria",
       "mappedBy": "categoria"
+    },
+    "producto": {
+      "type": "relation",
+      "relation": "oneToOne",
+      "target": "api::producto.producto",
+      "mappedBy": "categoria"
     }
   }
 }

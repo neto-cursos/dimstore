@@ -51,7 +51,9 @@
       "inversedBy": "productos"
     },
     "prod_cantidad": {
-      "type": "decimal"
+      "type": "decimal",
+      "default": 1,
+      "required": true
     },
     "prod_preciomayor": {
       "type": "float"
@@ -61,6 +63,35 @@
     },
     "prod_descuentos": {
       "type": "float"
+    },
+    "prod_condicion": {
+      "type": "string"
+    },
+    "categoria": {
+      "type": "relation",
+      "relation": "oneToOne",
+      "target": "api::categoria.categoria",
+      "inversedBy": "producto"
+    },
+    "prod_imagen_perfil": {
+      "allowedTypes": [
+        "images",
+        "files",
+        "videos",
+        "audios"
+      ],
+      "type": "media",
+      "multiple": true
+    },
+    "prod_imagen_camara": {
+      "allowedTypes": [
+        "images",
+        "files",
+        "videos",
+        "audios"
+      ],
+      "type": "media",
+      "multiple": true
     }
   }
 }
