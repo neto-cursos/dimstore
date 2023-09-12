@@ -18,31 +18,12 @@
     "prod_modelo": {
       "type": "string"
     },
-    "prod_ancho": {
-      "type": "float"
-    },
-    "prod_alto": {
-      "type": "float"
-    },
-    "prod_profundidad": {
-      "type": "float"
-    },
     "prod_estado": {
-      "type": "boolean"
+      "type": "boolean",
+      "default": true
     },
     "prod_descripcion": {
       "type": "richtext"
-    },
-    "prod_imagen": {
-      "type": "media",
-      "multiple": true,
-      "required": false,
-      "allowedTypes": [
-        "images",
-        "files",
-        "videos",
-        "audios"
-      ]
     },
     "marca": {
       "type": "relation",
@@ -51,21 +32,22 @@
       "inversedBy": "productos"
     },
     "prod_cantidad": {
-      "type": "decimal",
-      "default": 1,
-      "required": true
+      "type": "biginteger",
+      "required": true,
+      "min": "0",
+      "default": "1"
     },
     "prod_preciomayor": {
-      "type": "float"
+      "type": "decimal",
+      "min": 0
     },
     "prod_preciomenor": {
-      "type": "float"
+      "type": "decimal",
+      "min": 0,
+      "required": true
     },
     "prod_descuentos": {
       "type": "float"
-    },
-    "prod_condicion": {
-      "type": "string"
     },
     "categoria": {
       "type": "relation",
@@ -74,24 +56,43 @@
       "inversedBy": "producto"
     },
     "prod_imagen_perfil": {
+      "type": "media",
+      "multiple": false,
+      "required": true,
       "allowedTypes": [
         "images",
         "files",
         "videos",
         "audios"
-      ],
-      "type": "media",
-      "multiple": true
+      ]
     },
     "prod_imagen_camara": {
+      "type": "media",
+      "multiple": false,
+      "required": true,
       "allowedTypes": [
         "images",
         "files",
         "videos",
         "audios"
+      ]
+    },
+    "prod_condicion": {
+      "type": "enumeration",
+      "enum": [
+        "Nuevo",
+        "Usado",
+        "Repuesto",
+        "Defectuoso"
       ],
-      "type": "media",
-      "multiple": true
+      "default": "Repuesto",
+      "required": true
+    },
+    "Dimensiones": {
+      "displayName": "Dimensiones",
+      "type": "component",
+      "repeatable": false,
+      "component": "dimensiones.dimensiones"
     }
   }
 }

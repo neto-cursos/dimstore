@@ -1,0 +1,17 @@
+{
+  "collectionName": "components_dimensiones_dimensiones",
+  "info": {
+    "displayName": "Dimensiones",
+    "icon": "command",
+    "description": ""
+  },
+  "options": {},
+  "attributes": {
+    "ancho": {
+      "type": "decimal"
+    },
+    "alto": {
+      "type": "decimal"
+    }
+  }
+}

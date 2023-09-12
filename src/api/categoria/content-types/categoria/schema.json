@@ -13,7 +13,8 @@
   "pluginOptions": {},
   "attributes": {
     "cate_nombre": {
-      "type": "string"
+      "type": "string",
+      "required": true
     },
     "cate_estado": {
       "type": "boolean"
@@ -21,16 +22,16 @@
     "cate_descripcion": {
       "type": "richtext"
     },
-    "subcategoria": {
-      "type": "relation",
-      "relation": "oneToOne",
-      "target": "api::subcategoria.subcategoria",
-      "mappedBy": "categoria"
-    },
     "producto": {
       "type": "relation",
       "relation": "oneToOne",
       "target": "api::producto.producto",
+      "mappedBy": "categoria"
+    },
+    "subcategorias": {
+      "type": "relation",
+      "relation": "oneToMany",
+      "target": "api::subcategoria.subcategoria",
       "mappedBy": "categoria"
     }
   }

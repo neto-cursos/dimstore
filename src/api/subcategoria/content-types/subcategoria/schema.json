@@ -4,7 +4,8 @@
   "info": {
     "singularName": "subcategoria",
     "pluralName": "subcategorias",
-    "displayName": "Subcategoria"
+    "displayName": "Subcategoria",
+    "description": ""
   },
   "options": {
     "draftAndPublish": true
@@ -12,7 +13,8 @@
   "pluginOptions": {},
   "attributes": {
     "subc_nombre": {
-      "type": "string"
+      "type": "string",
+      "required": true
     },
     "subc_descripcion": {
       "type": "richtext"
@@ -22,9 +24,9 @@
     },
     "categoria": {
       "type": "relation",
-      "relation": "oneToOne",
+      "relation": "manyToOne",
       "target": "api::categoria.categoria",
-      "inversedBy": "subcategoria"
+      "inversedBy": "subcategorias"
     }
   }
 }
