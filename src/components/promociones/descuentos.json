@@ -1,0 +1,24 @@
+{
+  "collectionName": "components_promociones_descuentos",
+  "info": {
+    "displayName": "Descuentos",
+    "icon": "handHeart",
+    "description": ""
+  },
+  "options": {},
+  "attributes": {
+    "fecha_inicio": {
+      "type": "datetime",
+      "required": true,
+      "default": "2023-09-15T04:00:00.000Z"
+    },
+    "fecha_final": {
+      "type": "datetime",
+      "required": true,
+      "default": "2023-09-15T04:00:56.140Z"
+    },
+    "precio_descuento": {
+      "type": "decimal"
+    }
+  }
+}

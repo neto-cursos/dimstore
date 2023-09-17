@@ -13,7 +13,9 @@
   "pluginOptions": {},
   "attributes": {
     "prod_nombre": {
-      "type": "string"
+      "type": "string",
+      "required": true,
+      "maxLength": 254
     },
     "prod_modelo": {
       "type": "string"
@@ -37,23 +39,10 @@
       "min": "0",
       "default": "1"
     },
-    "prod_preciomayor": {
-      "type": "decimal",
-      "min": 0
-    },
-    "prod_preciomenor": {
+    "prod_precio": {
       "type": "decimal",
       "min": 0,
       "required": true
-    },
-    "prod_descuentos": {
-      "type": "float"
-    },
-    "categoria": {
-      "type": "relation",
-      "relation": "oneToOne",
-      "target": "api::categoria.categoria",
-      "inversedBy": "producto"
     },
     "prod_imagen_perfil": {
       "type": "media",
@@ -93,6 +82,25 @@
       "type": "component",
       "repeatable": false,
       "component": "dimensiones.dimensiones"
+    },
+    "descuentos": {
+      "type": "component",
+      "repeatable": false,
+      "component": "promociones.descuentos"
+    },
+    "subcategoria": {
+      "type": "relation",
+      "relation": "oneToOne",
+      "target": "api::subcategoria.subcategoria",
+      "inversedBy": "producto"
+    },
+    "slug": {
+      "type": "uid",
+      "targetField": "prod_nombre",
+      "required": true
+    },
+    "prod_precio_anterior": {
+      "type": "decimal"
     }
   }
 }

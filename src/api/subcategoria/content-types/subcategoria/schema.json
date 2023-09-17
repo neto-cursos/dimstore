@@ -20,13 +20,20 @@
       "type": "richtext"
     },
     "subc_estado": {
-      "type": "boolean"
+      "type": "boolean",
+      "default": true
     },
     "categoria": {
       "type": "relation",
       "relation": "manyToOne",
       "target": "api::categoria.categoria",
       "inversedBy": "subcategorias"
+    },
+    "producto": {
+      "type": "relation",
+      "relation": "oneToOne",
+      "target": "api::producto.producto",
+      "mappedBy": "subcategoria"
     }
   }
 }

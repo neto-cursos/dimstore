@@ -22,12 +22,6 @@
     "cate_descripcion": {
       "type": "richtext"
     },
-    "producto": {
-      "type": "relation",
-      "relation": "oneToOne",
-      "target": "api::producto.producto",
-      "mappedBy": "categoria"
-    },
     "subcategorias": {
       "type": "relation",
       "relation": "oneToMany",

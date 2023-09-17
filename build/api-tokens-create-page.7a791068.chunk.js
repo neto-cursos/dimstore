@@ -1,0 +1,1 @@
+"use strict";(self.webpackChunkcomputershopperu=self.webpackChunkcomputershopperu||[]).push([[4299],{1880:(p,t,e)=>{e.r(t),e.d(t,{default:()=>r});var s=e(27279),E=e(47560),_=e(49402),n=e(36364),o=e(92458);const r=()=>{const P=(0,_.v9)(n._);return s.createElement(E.O4,{permissions:P.settings["api-tokens"].create},s.createElement(o.Z,null))}}}]);
