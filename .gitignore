@@ -92,7 +92,7 @@ lcov.info
 pids
 logs
 results
-#node_modules
+node_modules
 .node_history
 
 ############################
@@ -110,5 +110,5 @@ license.txt
 exports
 *.cache
 dist
-#build
+build
 .strapi-updater.json
