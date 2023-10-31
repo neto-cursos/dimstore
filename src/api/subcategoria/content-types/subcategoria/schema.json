@@ -29,9 +29,9 @@
       "target": "api::categoria.categoria",
       "inversedBy": "subcategorias"
     },
-    "producto": {
+    "productos": {
       "type": "relation",
-      "relation": "oneToOne",
+      "relation": "oneToMany",
       "target": "api::producto.producto",
       "mappedBy": "subcategoria"
     }

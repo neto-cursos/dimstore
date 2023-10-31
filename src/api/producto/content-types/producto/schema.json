@@ -88,12 +88,6 @@
       "repeatable": false,
       "component": "promociones.descuentos"
     },
-    "subcategoria": {
-      "type": "relation",
-      "relation": "oneToOne",
-      "target": "api::subcategoria.subcategoria",
-      "inversedBy": "producto"
-    },
     "slug": {
       "type": "uid",
       "targetField": "prod_nombre",
@@ -101,6 +95,12 @@
     },
     "prod_precio_anterior": {
       "type": "decimal"
+    },
+    "subcategoria": {
+      "type": "relation",
+      "relation": "manyToOne",
+      "target": "api::subcategoria.subcategoria",
+      "inversedBy": "productos"
     }
   }
 }
